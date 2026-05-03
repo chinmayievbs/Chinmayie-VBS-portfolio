@@ -86,7 +86,25 @@
         {
             "role": "Web Developer Intern",
             "company": "Numerical Works",
-            "description": "Contributed to the open-source project Injee, a no-configuration instant database for front-end developers. Developed and enhanced the Injee Admin interface, refactored the SQL export UI, and implemented robust CRUD operations using Flask and SQLAlchemy while resolving database concurrency issues."
+            "description": "Contributed to the open-source project Injee, a no-configuration instant database for front-end developers. Developed and enhanced the Injee Admin interface, refactored the SQL export UI, and implemented robust CRUD operations using Flask and SQLAlchemy while resolving database concurrency issues.",
+            "links": [
+                {
+                    "name": "Project Page",
+                    "url": "https://injee.codeberg.page/"
+                },
+                {
+                    "name": "Company Page",
+                    "url": "https://www.linkedin.com/company/numericalworks/"
+                },
+                {
+                    "name": "My Activity",
+                    "url": "https://codeberg.org/chinmayievbs?tab=activity"
+                },
+                {
+                    "name": "Team Page",
+                    "url": "https://injee.codeberg.page/team.html"
+                }
+            ]
         }
     ],
     "skills": {

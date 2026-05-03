@@ -16,42 +16,36 @@ const Hero = () => {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 pt-20">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-20 left-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <div className="absolute top-20 right-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
-
+        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
             <div className="container mx-auto px-6 relative z-10 flex flex-col-reverse md:flex-row items-center justify-between">
-
                 <div className="w-full md:w-1/2 text-center md:text-left mt-12 md:mt-0">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.7, ease: "easeOut" }}
                     >
-                        <h2 className="text-blue-600 font-semibold text-lg mb-2">Hello, I'm</h2>
-                        <h1 className="text-5xl md:text-6xl md:leading-tight font-extrabold text-gray-900 leading-tight mb-4 whitespace-nowrap">
-                            <span className="text-gradient">{data.personalInfo.name}</span>
+                        <h2 className="text-purple-400 font-bold text-xl tracking-widest mb-2 uppercase drop-shadow-sm">Hello, I'm</h2>
+                        <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 whitespace-nowrap tracking-tight">
+                            <span className="text-gradient drop-shadow-lg">{data.personalInfo.name}</span>
                         </h1>
-                        <h3 className="text-2xl md:text-3xl text-gray-600 font-medium mb-6">
+                        <h3 className="text-2xl md:text-4xl text-slate-200 font-medium mb-6 drop-shadow-md">
                             {data.personalInfo.role}
                         </h3>
-                        <p className="text-gray-600 text-lg mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        <p className="text-slate-400 text-lg mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed font-light">
                             {data.personalInfo.bio}
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+                        <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start mb-10">
                             <a
                                 href="#projects"
-                                className="group px-8 py-3 bg-blue-600 text-white rounded-full font-medium transition hover:bg-blue-700 flex items-center justify-center gap-2"
+                                className="group px-8 py-3.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] flex items-center justify-center gap-2"
                             >
                                 View Projects
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
                                 href={data.personalInfo.links.resume}
-                                className="group px-8 py-3 bg-white text-gray-800 border border-gray-300 rounded-full font-medium transition hover:border-gray-400 hover:shadow-sm flex items-center justify-center gap-2"
+                                className="group px-8 py-3.5 bg-slate-800/50 backdrop-blur-md text-white border border-slate-700 rounded-full font-semibold transition-all hover:bg-slate-700/50 hover:border-slate-500 hover:shadow-lg flex items-center justify-center gap-2"
                                 download
                             >
                                 Download Resume
@@ -59,7 +53,7 @@ const Hero = () => {
                             </a>
                         </div>
 
-                        <div className="flex gap-4 justify-center md:justify-start">
+                        <div className="flex gap-5 justify-center md:justify-start">
                             {Object.entries(data.personalInfo.links).map(([key, url]) => {
                                 if (key === 'email' || key === 'resume' || key === 'coverLetter') return null;
                                 return (
@@ -68,7 +62,7 @@ const Hero = () => {
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-3 bg-white text-gray-600 rounded-full shadow-sm hover:text-blue-600 hover:shadow-md transition-all"
+                                        className="p-3.5 bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 text-slate-300 rounded-full hover:bg-purple-500/20 hover:text-purple-400 hover:border-purple-500/50 transition-all hover:scale-110 hover:-translate-y-1 shadow-lg"
                                         title={key.charAt(0).toUpperCase() + key.slice(1)}
                                     >
                                         {getSocialIcon(key)}
@@ -80,17 +74,25 @@ const Hero = () => {
                 </div>
 
                 <div className="w-full md:w-1/2 flex justify-center">
-                    {/* Placeholder for Profile Image or Illustration */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                        initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                         animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                        transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+                        transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
                         className="relative float-3d"
                     >
-                        <div className="card-3d w-64 h-64 md:w-80 md:h-80 rounded-full md:rounded-3xl overflow-hidden border-2 border-white/50 flex flex-col items-center justify-center relative">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-500/20 backdrop-blur-sm z-0"></div>
-                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600 font-black text-7xl md:text-8xl z-10 drop-shadow-sm">CV</span>
-                            <span className="text-gray-500 font-medium mt-2 z-10 bg-white/50 px-3 py-1 rounded-full text-sm">Profile Image</span>
+                        {/* Glowing backdrop for image */}
+                        <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                        
+                        <div className="card-3d w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-slate-700/50 relative shadow-[0_0_40px_rgba(168,85,247,0.2)]">
+                            <img 
+                                src="/profile.jpg" 
+                                alt="Profile" 
+                                className="w-full h-full object-cover z-10 transition-transform duration-700 hover:scale-110"
+                                onError={(e) => {
+                                    e.target.onerror = null; 
+                                    e.target.src = "https://via.placeholder.com/400x400.png?text=Add+profile.jpg+to+public+folder";
+                                }}
+                            />
                         </div>
                     </motion.div>
                 </div>
