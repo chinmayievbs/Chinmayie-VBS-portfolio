@@ -84,7 +84,7 @@
     ],
     "experience": [
         {
-            "role": "Software Developer Intern",
+            "role": "Web Developer Intern",
             "company": "Numerical Works",
             "description": "Contributed to the open-source project Injee, a no-configuration instant database for front-end developers. Developed and enhanced the Injee Admin interface, refactored the SQL export UI, and implemented robust CRUD operations using Flask and SQLAlchemy while resolving database concurrency issues."
         }

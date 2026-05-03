@@ -31,8 +31,8 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-blue-600 font-semibold text-lg mb-2">Hello, I'm</h2>
-                        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-4 whitespace-nowrap">
-                            {data.personalInfo.name}
+                        <h1 className="text-5xl md:text-6xl md:leading-tight font-extrabold text-gray-900 leading-tight mb-4 whitespace-nowrap">
+                            <span className="text-gradient">{data.personalInfo.name}</span>
                         </h1>
                         <h3 className="text-2xl md:text-3xl text-gray-600 font-medium mb-6">
                             {data.personalInfo.role}
@@ -82,14 +82,15 @@ const Hero = () => {
                 <div className="w-full md:w-1/2 flex justify-center">
                     {/* Placeholder for Profile Image or Illustration */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.5 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        className="relative"
+                        initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                        transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+                        className="relative float-3d"
                     >
-                        <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gray-200 flex items-center justify-center">
-                            <span className="text-gray-400 text-6xl">CV</span>
-                            {/* <img src="path/to/image.jpg" alt="Chinmayie" className="w-full h-full object-cover" /> */}
+                        <div className="card-3d w-64 h-64 md:w-80 md:h-80 rounded-full md:rounded-3xl overflow-hidden border-2 border-white/50 flex flex-col items-center justify-center relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-500/20 backdrop-blur-sm z-0"></div>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600 font-black text-7xl md:text-8xl z-10 drop-shadow-sm">CV</span>
+                            <span className="text-gray-500 font-medium mt-2 z-10 bg-white/50 px-3 py-1 rounded-full text-sm">Profile Image</span>
                         </div>
                     </motion.div>
                 </div>

@@ -18,14 +18,18 @@ const Skills = () => {
                     </p>
                 </motion.div>
 
-                <div className="max-w-5xl mx-auto space-y-12">
+                <div className="max-w-5xl mx-auto space-y-12 relative z-10">
+                    {/* Background decoration */}
+                    <div className="absolute top-1/2 right-10 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-3d animate-blob hidden md:block"></div>
+                    <div className="absolute bottom-10 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-3d animate-blob animation-delay-4000 hidden md:block"></div>
+
                     {Object.entries(data.skills).map(([category, skills], categoryIndex) => (
-                        <div key={categoryIndex}>
+                        <div key={categoryIndex} className="card-3d p-8 rounded-2xl">
                             <motion.h3
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="text-xl font-bold text-gray-700 mb-6 border-l-4 border-blue-600 pl-4"
+                                className="text-2xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-4"
                             >
                                 {category}
                             </motion.h3>
@@ -37,7 +41,7 @@ const Skills = () => {
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: index * 0.05 }}
-                                        className="px-6 py-3 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 text-gray-700 font-medium hover:text-blue-600 hover:border-blue-100 transition-all cursor-default"
+                                        className="px-6 py-3 bg-white/50 backdrop-blur-md rounded-xl shadow-sm border border-white/60 text-gray-700 font-semibold hover:text-blue-600 hover:scale-105 hover:shadow-lg transition-all cursor-default"
                                     >
                                         {skill}
                                     </motion.div>

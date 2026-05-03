@@ -5,48 +5,46 @@ import data from '../data.json';
 
 const Experience = () => {
     return (
-        <section id="experience" className="py-20 bg-gray-50">
-            <div className="container mx-auto px-6">
+        <section id="experience" className="py-20 bg-gray-50 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-3d animate-blob"></div>
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-3d animate-blob animation-delay-2000"></div>
+
+            <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Experience</h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <h2 className="text-4xl font-bold mb-4"><span className="text-gradient">Experience</span></h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                         My professional journey and internships.
                     </p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto relative">
-                    {/* Timeline Line */}
-                    <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-blue-100"></div>
-
+                <div className="max-w-3xl mx-auto">
                     {data.experience.map((exp, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.2 }}
-                            className={`relative flex flex-col md:flex-row gap-8 mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                                }`}
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            className="card-3d rounded-2xl p-8 mb-8 flex flex-col md:flex-row gap-6 items-start"
                         >
-                            {/* Timeline Dot */}
-                            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-md z-10 flex items-center justify-center">
-                                <Briefcase size={14} className="text-white" />
+                            <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-16 h-16 rounded-xl shadow-lg flex-shrink-0 flex items-center justify-center transform transition-transform hover:scale-110 hover:rotate-6">
+                                <Briefcase size={28} className="text-white" />
                             </div>
 
-                            {/* Content Card */}
-                            <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? 'md:pr-12 text-left md:text-right' : 'md:pl-12 text-left'}`}>
-                                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                                    <h3 className="text-xl font-bold text-gray-800">{exp.role}</h3>
-                                    <h4 className="text-blue-600 font-medium mb-2">{exp.company}</h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        {exp.description}
-                                    </p>
+                            <div className="flex-1 text-left">
+                                <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+                                    <h3 className="text-2xl font-bold text-gray-800">{exp.role}</h3>
                                 </div>
+                                <h4 className="text-blue-600 font-semibold text-lg mb-4">{exp.company}</h4>
+                                <p className="text-gray-600 leading-relaxed text-md">
+                                    {exp.description}
+                                </p>
                             </div>
                         </motion.div>
                     ))}
