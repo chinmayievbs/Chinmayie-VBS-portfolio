@@ -1,0 +1,170 @@
+{
+    "personalInfo": {
+        "name": "CHINMAYIE V B S",
+        "role": "Web Developer",
+        "bio": "I'm a passionate developer specializing in data analysis, API integration, and creating innovative web and mobile applications. Currently, I'm learning how to integrate APIs into Chrome extensions and seeking opportunities to collaborate on open-source projects related to machine learning, mobile apps, or creative web solutions.",
+        "learning": [
+            "Integrating APIs with Chrome extensions",
+            "Advanced data analytics and visualization",
+            "Machine learning models for text and voice processing"
+        ],
+        "funFact": "I’m constantly experimenting and transforming my projects—what you see today might be completely different tomorrow. Creativity is always in motion!",
+        "links": {
+            "github": "https://github.com/Chinnima28",
+            "linkedin": "https://www.linkedin.com/in/chinmayievbs20032805/",
+            "email": "chinmayiesubramanian@gmail.com",
+            "leetcode": "https://leetcode.com/u/chinmayie",
+            "geeksforgeeks": "https://auth.geeksforgeeks.org/user/chinmayie"
+        }
+    },
+    "projects": [
+        {
+            "title": "DevGuard (Open Source)",
+            "techStack": [
+                "Open Source",
+                "Security",
+                "UI/UX",
+                "Collaboration"
+            ],
+            "description": "Contributed a fix for issue #767, merged in PR #447. Improved UI clarity through bug fixing and collaborated using professional open source workflows.",
+            "githubLink": "https://github.com/l3montree-dev/devguard-web"
+        },
+        {
+            "title": "Philotes Voice Assistant",
+            "techStack": [
+                "Python"
+            ],
+            "description": "A streamlined voice assistant for seamless user interaction and assistance.",
+            "githubLink": "https://github.com/Chinnima28/philotes-voice-assistant"
+        },
+        {
+            "title": "Multilingual Melodies",
+            "techStack": [
+                "Python",
+                "Lingva Translate API",
+                "Spotify API",
+                "Lyrics.ovh",
+                "JS"
+            ],
+            "description": "Enhancing global music experience with meaningful lyrics translations.",
+            "githubLink": "https://github.com/Chinnima28/multilingual-melodies"
+        },
+        {
+            "title": "POMOFOMO",
+            "techStack": [
+                "HTML",
+                "CSS",
+                "JS",
+                "Flask",
+                "Python"
+            ],
+            "description": "A Python-powered scheduler to help students focus during online classes by implementing focused time management techniques.",
+            "githubLink": "https://github.com/Chinnima28/pomofomo"
+        },
+        {
+            "title": "DAZAI",
+            "techStack": [
+                "Google Translate web",
+                "Manifest V3",
+                "Background scripts",
+                "HTML"
+            ],
+            "description": "Empowering inclusivity by converting English content to Hindi for accessible government websites.",
+            "githubLink": "https://github.com/Chinnima28/dazai"
+        },
+        {
+            "title": "MapSortingUtility",
+            "techStack": [
+                "Java",
+                "Data Structures"
+            ],
+            "description": "A Java library for sorting maps by keys or values.",
+            "githubLink": "https://github.com/Chinnima28/MapSortingUtility"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Software Developer Intern",
+            "company": "Numerical Works",
+            "description": "Contributed to the open-source project Injee, a no-configuration instant database for front-end developers. Developed and enhanced the Injee Admin interface, refactored the SQL export UI, and implemented robust CRUD operations using Flask and SQLAlchemy while resolving database concurrency issues."
+        }
+    ],
+    "skills": {
+        "Programming Languages": [
+            "Python",
+            "Java",
+            "C",
+            "SQL",
+            "HTML",
+            "CSS"
+        ],
+        "Frameworks & Libraries": [
+            "Flask",
+            "NumPy",
+            "Spring Boot",
+            "React",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Java Streams",
+            "Java AWT"
+        ],
+        "Tools & Platforms": [
+            "Android Studio",
+            "Eclipse",
+            "Visual Studio Code",
+            "Spyder",
+            "Jupyter Notebook",
+            "Code::Blocks",
+            "Anaconda",
+            "GitHub",
+            "MySQL",
+            "Docker",
+            "Postman"
+        ],
+        "APIs": [
+            "Lyrics.ovh",
+            "Lingva Translate",
+            "Spotify API",
+            "Manifest V3",
+            "Background Scripts"
+        ],
+        "AI Tools": [
+            "ChatGPT",
+            "Gemini",
+            "Blackbox AI",
+            "Windows Copilot"
+        ]
+    },
+    "certifications": [
+        {
+            "title": "Python Basics for Data Science",
+            "issuer": "IBM",
+            "link": "https://courses.edx.org/certificates/c95848529d1d4e2faf967b23f63c1a38"
+        },
+        {
+            "title": "Statistics 101",
+            "issuer": "IBM",
+            "link": "https://courses.skillsbuild.skillsnetwork.site/certificates/d9c21d12f49f4ed18e271009a3b430bf"
+        },
+        {
+            "title": "Elements of AI",
+            "issuer": "University of Helsinki & Minnalearn",
+            "link": "https://certificates.mooc.fi/validate/yb6mzn4902"
+        },
+        {
+            "title": "AI Primer Certification",
+            "issuer": "Infosys",
+            "link": "https://drive.google.com/file/d/1axVrwh8fA8UVqss4L3Gxsggny_dYjG2K/view"
+        },
+        {
+            "title": "Java Full Stack Certification",
+            "issuer": "Wipro",
+            "link": "https://drive.google.com/file/d/1-sSI9Arf8DNd2QPzvpybjnJWNe5xFT2T/view"
+        },
+        {
+            "title": "Python Essentials Badge",
+            "issuer": "edX",
+            "link": "https://drive.google.com/file/d/1RJ_4SVnTApYeoyvPgvHDZv-LzcdQMvjE/view"
+        }
+    ]
+}
