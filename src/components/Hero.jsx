@@ -85,12 +85,12 @@ const Hero = () => {
                         
                         <div className="card-3d w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-slate-700/50 relative shadow-[0_0_40px_rgba(168,85,247,0.2)]">
                             <img 
-                                src="/profile.jpg" 
+                                src="/photo.jpg" 
                                 alt="Profile" 
                                 className="w-full h-full object-cover z-10 transition-transform duration-700 hover:scale-110"
                                 onError={(e) => {
                                     e.target.onerror = null; 
-                                    e.target.src = "https://via.placeholder.com/400x400.png?text=Add+profile.jpg+to+public+folder";
+                                    e.target.src = "https://via.placeholder.com/400x400.png?text=Add+photo.jpg+to+public+folder";
                                 }}
                             />
                         </div>
