@@ -16,17 +16,18 @@ const Navbar = () => {
 
     const navLinks = [
         { title: 'About', href: '#about' },
+        { title: 'Experience', href: '#experience' },
         { title: 'Skills', href: '#skills' },
-        { title: 'Projects', href: '#projects' },
         { title: 'Certifications', href: '#certifications' },
+        { title: 'Projects', href: '#projects' },
         { title: 'Contact', href: '#contact' },
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-sm shadow-md py-4' : 'bg-transparent py-6'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#030712]/80 backdrop-blur-lg border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold text-gray-800">
-                    Chinmayie<span className="text-blue-600">.</span>
+                <a href="#" className="text-2xl font-bold text-white tracking-tight">
+                    Chinmayie<span className="text-purple-500">.</span>
                 </a>
 
                 {/* Desktop Menu */}
@@ -35,7 +36,7 @@ const Navbar = () => {
                         <a
                             key={link.title}
                             href={link.href}
-                            className="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium"
+                            className="text-slate-400 hover:text-white transition-colors duration-200 font-medium text-sm tracking-wide uppercase"
                         >
                             {link.title}
                         </a>
@@ -44,7 +45,7 @@ const Navbar = () => {
                         href="https://github.com/Chinnima28"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                        className="text-slate-400 hover:text-white transition-colors"
                     >
                         <Github size={20} />
                     </a>
@@ -54,7 +55,7 @@ const Navbar = () => {
                 <div className="md:hidden">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="text-gray-600 hover:text-blue-600 focus:outline-none"
+                        className="text-slate-400 hover:text-white focus:outline-none"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -68,7 +69,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white border-t"
+                        className="md:hidden bg-[#030712] border-t border-white/5"
                     >
                         <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
                             {navLinks.map((link) => (
@@ -76,13 +77,13 @@ const Navbar = () => {
                                     key={link.title}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-gray-600 hover:text-blue-600 font-medium"
+                                    className="text-slate-400 hover:text-white font-medium"
                                 >
                                     {link.title}
                                 </a>
                             ))}
-                            <div className="flex space-x-4 pt-4 border-t">
-                                <a href="https://github.com/Chinnima28" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+                            <div className="flex space-x-4 pt-4 border-t border-white/5">
+                                <a href="https://github.com/Chinnima28" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white">
                                     <Github size={20} />
                                 </a>
                             </div>
