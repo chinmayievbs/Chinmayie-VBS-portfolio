@@ -85,7 +85,7 @@ const Hero = () => {
                         
                         <div className="card-3d w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-slate-700/50 relative shadow-[0_0_40px_rgba(168,85,247,0.2)]">
                             <img 
-                                src="/photo.jpg" 
+                                src="https://raw.githubusercontent.com/Chinnima28/Chinmayie-VBS-portfolio/8829db9bc6845af5a655dd87a2d16631d4d371aa/photo.jpg" 
                                 alt="Profile" 
                                 className="w-full h-full object-cover z-10 transition-transform duration-700 hover:scale-110"
                                 onError={(e) => {
